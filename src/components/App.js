@@ -1,14 +1,14 @@
 import React from 'react'
-import Article from "./Article"
 import posts from '../fixtures'
+import PostList from "./PostList";
 
 function App() {
    return(
     <div>
         <h1>
-            Post
+            Posts
         </h1>
-        <Article post = {posts[0]}/>
+        <PostList posts = {posts}/> //передаем как props в PostList
     </div>
    )
 

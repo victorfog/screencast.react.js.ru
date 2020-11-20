@@ -14,6 +14,7 @@ class Article extends Component{
                     {post.title}
                     <button onClick={this.handleClick}>
                         {this.state.isOpen ? 'close' : 'open'}
+                        {this.state.isOpen}
                     </button>
                 </h2>
                 <h3>{mainText}</h3>
