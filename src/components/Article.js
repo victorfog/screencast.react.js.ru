@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class Article extends Component{
     state = { //Экспериментальный систаксис. По старинке тут идет описание Constructor
-        isOpen: true //редактировать state без setState не рекомендуется
+        isOpen: false //редактировать state без setState не рекомендуется
     }
 
     render() {

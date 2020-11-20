@@ -8,7 +8,7 @@ function App() {
         <h1>
             Posts
         </h1>
-        <PostList posts = {posts}/> //передаем как props в PostList
+        <PostList posts = {posts}/>
     </div>
    )
 
