@@ -1,9 +1,30 @@
 import React, {Component} from 'react'
 
 class Article extends Component {
-    state = { //Экспериментальный систаксис. По старинке тут идет описание Constructor
-        isOpen: false //редактировать state без setState не рекомендуется
+    //__________________________________
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: props.defaultOpen
+        }
     }
+
+    //__________________________________
+    // В кратком синтаксисе НЕ ДОСТУПНЫ МЕТОДЫ ЖИЗНЕННОГО ЦИКЛА
+    // state = { //Экспериментальный систаксис. По старинке тут идет описание Constructor
+    //     isOpen: false //редактировать state без setState не рекомендуется
+    // }
+    componentWillReceiveProps(nextProps) {
+        console.log("--- componentWillReceiveProps ----")
+        if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
+            isOpen: nextProps.defaultOpen
+        })
+    }
+    componentWillUpdate() {
+        console.log("--- componentWillUpdate ---")
+
+    }
+
 
     render() {
         const {post} = this.props;
